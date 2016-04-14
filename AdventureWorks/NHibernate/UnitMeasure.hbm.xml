@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="Adv.Domain" namespace="Adv.Domain.NHibernate">
+  <class name="UnitMeasure" table="Production.UnitMeasure" dynamic-update="true">
+    <cache usage="read-write" />
+    <id name="UnitMeasureCode" column="UnitMeasureCode" type="string" />
+    <property name="UnitMeasureName" column="Name" />
+    <property name="ModifiedDate" />
+  </class>
+</hibernate-mapping>

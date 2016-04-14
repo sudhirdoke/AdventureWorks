@@ -1,0 +1,31 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="Adv.Domain" namespace="Adv.Domain.NHibernate">
+<class name="Product" table="Production.Product" dynamic-update="true" >
+<cache usage="read-write" />
+<id name="Id" column="ProductID" type="int">
+<generator class="native" />
+</id>
+<property name="ProductName" column="Name" />
+<property name="ProductNumber" />
+<property name="MakeFlag" />
+<property name="FinishedGoodsFlag" />
+<property name="Color" />
+<property name="SafetyStockLevel" />
+<property name="ReorderPoint" />
+  <property name="StandardCost" />
+  <property name="ListPrice" />
+<property name="Size" />
+<property name="SizeUnitMeasureCode" />
+<property name="WeightUnitMeasureCode" />
+<property name="Weight" />
+<property name="DaysToManufacture" />
+<property name="ProductLine" />
+<property name="Class" />
+<property name="Style" />
+<property name="ProductSubcategoryID" />
+<property name="ProductModelID" />
+<property name="SellStartDate" />
+<property name="SellEndDate" />
+<property name="DiscontinuedDate" />
+<property name="ModifiedDate" />
+</class>
+</hibernate-mapping>

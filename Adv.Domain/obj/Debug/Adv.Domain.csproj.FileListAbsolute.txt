@@ -1,0 +1,9 @@
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\Adv.Domain.dll
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\Adv.Domain.pdb
+G:\CodeChallange\AdventureWorks\Adv.Domain\obj\Debug\Adv.Domain.dll
+G:\CodeChallange\AdventureWorks\Adv.Domain\obj\Debug\Adv.Domain.pdb
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\Iesi.Collections.dll
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\NHibernate.dll
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\Iesi.Collections.xml
+G:\CodeChallange\AdventureWorks\Adv.Domain\bin\Debug\NHibernate.xml
+G:\CodeChallange\AdventureWorks\Adv.Domain\obj\Debug\Adv.Domain.csprojResolveAssemblyReference.cache

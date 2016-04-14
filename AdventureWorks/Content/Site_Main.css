@@ -1,0 +1,12 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.pad-min {
+    padding-left:10px;
+    padding-right:10px;
+}
+.pad-max {
+    padding-left:50px;
+    padding-right:50px;
+}

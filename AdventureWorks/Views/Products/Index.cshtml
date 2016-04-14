@@ -1,0 +1,36 @@
+﻿@model AdventureWorks.Models.ProductsIndexModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products Index</h2>
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th class="pad-min">Product Number</th><th class="pad-min">Product Name</th><th class="pad-min">Color</th>
+            <th class="pad-min">Product Line</th><th class="pad-min">Class</th>
+            <th>Standard Cost</th><th>List Price</th>
+        </tr>
+    </thead>
+    @{
+        foreach (var product in Model.Products)
+        {
+            <tr>
+                <td class="pad-min">@Html.ActionLink(product.ProductNumber, "ProductDetails", new { id = product.Id })</td><td class="pad-min">@product.ProductName</td>
+                <td class="pad-min">@product.Color</td><td class="pad-min">@product.ProductLine</td><td class="pad-min">@product.Class</td>
+                <td>@product.StandardCost</td><td>@product.ListPrice</td>
+            </tr>
+        }
+    }
+    
+</table>
+<div class="pagination">
+    <ol class="pager">
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="pad-min">@Html.ActionLink(i.ToString(), "Index", new { pageNumber = i })</li>
+        }
+    </ol>
+</div>
+

@@ -1,0 +1,64 @@
+﻿@model AdventureWorks.Models.ProductCategoryIndexModel
+@{
+    ViewBag.Title = "ProductCategoryIndex";
+}
+
+<h2>Product - Category Index</h2>
+<div class="container table">
+    <div class="row">
+        <h3>Total: @Model.ProductCategoryList.Count</h3>
+        <input type="button" id="btn1" name="btn1" onclick="javascript:openPopup();" value="Pop Open" />
+        <button id="show-dialog">Click to see jQuery UI in Action</button> 
+    </div> 
+</div>
+
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th class="pad-min">Name</th>
+            <th class="pad-min">RowGUID</th>
+            <th class="pad-min">Date Modified</th>
+        </tr>
+    </thead>
+    @{
+        foreach (var product in Model.ProductCategoryList)
+        {
+            <tr>
+                <td class="pad-min">@product.ProductCategoryName</td>
+                <td class="pad-min">@product.rowguid</td>
+                <td class="pad-min">@product.ModifiedDate</td>
+            </tr>
+        }
+    }
+
+</table>
+
+<div id="dialog" style="display:none; background-color:aqua; border-bottom-style:inset" class="container">
+    Modal Dialog XXXX....!!!
+</div>
+<style>
+    .ui-dialog-titlebar-close{
+    display: none;
+}
+</style>
+
+@section scripts {
+<script type="text/javascript">
+        $('#dialog').dialog({
+            autoOpen: false,
+            width: 600,
+            buttons: {
+                "Ok": function () { $(this).dialog("close"); },
+                "Cancel": function () { $(this).dialog("close"); }
+            }
+        });
+        
+        $("#show-dialog").button().click(function () {
+            $('#dialog').dialog('open');
+            return false;
+        });
+    
+</script>
+    
+    }

@@ -1,0 +1,19 @@
+﻿@model AdventureWorks.Models.ProductsIndexModel
+@{
+    ViewBag.Title = "ProductDetails";
+}
+
+<h2>ProductDetails</h2>
+<ol>
+    <li>ID: @Model.Products[0].Id</li>
+    <li>Product Number: @Model.Products[0].ProductNumber</li>
+    <li>Product Name: @Model.Products[0].ProductName</li>
+    <li>Color: @Model.Products[0].Color</li>
+    <li>Weight: @Model.Products[0].Weight</li>
+    <li>Sell Start Date: @Model.Products[0].SellStartDate</li>
+    <li>Sell End Date: @Model.Products[0].SellEndDate</li>
+    <li>Model: @(Model.ProductModel==null ? "" : Model.ProductModel.ProductModelName)</li>
+    <li>Product SubCategory: @(Model.ProductSubCategory==null ? "" : Model.ProductSubCategory.ProductSubcategoryName)</li>
+    <li>Product Category: @(Model.ProductCategory==null ? "" : Model.ProductCategory.ProductCategoryName)</li>
+    <li>Product UOM: @(Model.ProductUOM==null ? "" : Model.ProductUOM.UnitMeasureName) </li>
+</ol>

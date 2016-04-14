@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" auto-import="true" assembly="Adv.Domain" namespace="Adv.Domain.NHibernate">
+  <class name="ProductSubCategory" table="Production.ProductSubcategory" dynamic-update="true" >
+    <cache usage="read-write" />
+    <id name="Id" column="ProductSubcategoryID" type="int">
+      <generator class="native" />
+    </id>
+    <property name="ProductCategoryID" />
+    <property name="ProductSubcategoryName" column="Name" />
+    <property name="ModifiedDate" />
+  </class>
+</hibernate-mapping>
